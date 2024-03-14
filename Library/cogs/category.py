@@ -141,7 +141,7 @@ class category(commands.Cog):
     @commands.slash_command(name = "категории", description="выбрать нужную категорию для чтения") 
     async def __category(self, inter):
         await inter.send("_Выберите категорию для чтения_", view = DropdownView())
-
+.
 
 def setup(bot):
     bot.add_cog(category(bot))
