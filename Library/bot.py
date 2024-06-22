@@ -1,4 +1,6 @@
+from webserver import keep_alive
 import disnake
+import os
 from disnake.ext import commands
 
 
@@ -12,5 +14,5 @@ async def on_ready():
     print(f"{bot.user} is connected!") 
     await bot.change_presence(status=disnake.Status.idle, activity=disnake.Game("/помощь"))
 
-
-bot.run('MTA3MDc4NDQzOTk2MzEwNzM3OA.GkiSFf.UyhhKLzM_xzZCcWnumqwwc2P004KbcB01P-fMg')
+keep_alive()
+bot.run(os.getenv("TOKEN"))
